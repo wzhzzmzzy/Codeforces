@@ -41,6 +41,21 @@ make
 2. 选择编译器 G++ 或者 Clang
 3. 点击运行，选择 codeforces
 4. 如需修改默认参数，可以在 `.vscode/settings.json` 中修改
+5. 添加题目后运行
+
+### 一键创建新题
+
+```shell
+python3 ./scripts/new_problem.py 123A
+```
+
+此脚本会自动创建：
+- solutions 中的 cpp/hpp
+- tests 中的 cpp
+- samples 中的 txt
+- 更新 solutions.hpp
+
+**依然需要手动修改 main.cpp**
 
 ### 创建新题
 
@@ -90,4 +105,12 @@ TEST(Case_1374C, test_file) {
     // 对比答案是否正确，注意换行符可能导致测试不通过
     ASSERT_STREQ(output.c_str(), ans.c_str());
 }
+```
+
+### 运行单测
+
+如果只需要运行一个文件的单测，需要修改 `tests/CMakeLists.txt` 中的这一行：
+```
+# 把 1A_test.cpp 改成需要执行的
+set(TESTS_SINGLE main.cpp 1A_test.cpp)
 ```
