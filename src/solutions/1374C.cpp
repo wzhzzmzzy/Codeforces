@@ -1,6 +1,10 @@
+/**
+ * https://codeforces.com/problemset/problem/1374/C
+ */
+
 namespace CF_1374C {
 
-#include <cstdio>
+#include <stdio.h>
  
 int solve(int len, const char* s) {
     int ans = 0;
@@ -18,7 +22,7 @@ int solve(int len, const char* s) {
     }
     return ans;
 }
- 
+
 int main() {
     int n; scanf("%d", &n);
     while (n) {

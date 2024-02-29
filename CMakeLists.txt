@@ -1,8 +1,8 @@
 cmake_minimum_required (VERSION 3.20.0)
 
-project (amber_cf VERSION 1.0.0)
+project (codeforces VERSION 1.0.0)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(src)
 add_subdirectory(tests)

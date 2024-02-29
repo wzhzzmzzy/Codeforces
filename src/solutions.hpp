@@ -1,1 +1,1 @@
-#include "1374C.hpp"
+#include "solutions/1374C.hpp"
