@@ -35,6 +35,13 @@ make
 
 ## Usage
 
+### VSCode 使用
+
+1. 安装 CMake、CMake Tools 插件
+2. 选择编译器 G++ 或者 Clang
+3. 点击运行，选择 codeforces
+4. 如需修改默认参数，可以在 `.vscode/settings.json` 中修改
+
 ### 创建新题
 
 1. 在 `src/solutions` 中创建新的 cpp 和 hpp 文件即可，建议使用题号作为名称。
