@@ -1,0 +1,37 @@
+{
+	// Place your Codeforces 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"gtest stdout capture": {
+		"scope": "cpp",
+		"prefix": "teststdout",
+		"body": [
+			"TEST(Case_$1, test_file) {",
+			"	testing::internal::CaptureStdout();",
+			"	freopen(\"samples/$1.txt\", \"r\", stdin);",
+			"	std::ifstream input_file(\"samples/$1_ans.txt\");",
+			"	std::string ans = std::string(",
+			"		std::istreambuf_iterator<char>(input_file),",
+			"		std::istreambuf_iterator<char>()",
+			"	);",
+			"	CF_$1::main();",
+			"	std::string output = testing::internal::GetCapturedStdout();",
+			"	ASSERT_STREQ(output.c_str(), ans.c_str());"
+			"}"
+		],
+		"description": "添加一个测试用例，使用 Gtest 捕获 stdout 的输出内容，与指定文件比对"
+	}
+}
