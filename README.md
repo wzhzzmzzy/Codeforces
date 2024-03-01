@@ -57,6 +57,10 @@ python3 ./scripts/new_problem.py 123A
 
 **依然需要手动修改 main.cpp**
 
+### 一键添加 STDOUT 单测
+
+在任意单测 cpp 文件中，输入 `teststdout` 前缀，会自动触发预设的单测 Snippets
+
 ### 创建新题
 
 1. 在 `src/solutions` 中创建新的 cpp 和 hpp 文件即可，建议使用题号作为名称。
