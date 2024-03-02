@@ -25,6 +25,9 @@ int main(int argc, char *const argv[]) {
         if (problem_id == "1366A") {
             return CF_1366A::main();
         }
+        if (problem_id == "1336A") {
+            return CF_1336A::main();
+        }
         std::cout << "Unknown Problem ID" << std::endl;
     }
     return 0;
